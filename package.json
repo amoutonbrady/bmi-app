@@ -1,0 +1,34 @@
+{
+  "name": "pc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rollup -c"
+  },
+  "keywords": [],
+  "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "postcss": "^6.0.14",
+    "postcss-import": "^11.0.0",
+    "precss": "^2.0.0",
+    "rollup": "^0.51.7",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "^0.5.5",
+    "rollup-plugin-uglify": "^2.0.1",
+    "uglify-es": "^3.1.9"
+  },
+  "dependencies": {
+    "hyperhtml": "^2.0.6",
+    "majinbuu": "^1.1.2"
+  }
+}

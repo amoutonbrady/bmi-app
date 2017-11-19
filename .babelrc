@@ -1,0 +1,4 @@
+{
+  "plugins": ["external-helpers"],
+  "presets": [["env", { "modules": false }], "stage-0"]
+}
