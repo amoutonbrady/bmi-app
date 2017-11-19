@@ -49,6 +49,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
+}
+
+.heartbeat {
 	animation: heartbeat 2s ease-in-out infinite both;
 }
 

@@ -34,6 +34,8 @@ function App(html, store) {
     const { height, weight } = store;
 
     const bmi = num(weight) / Math.pow(num(height), 2);
+
+    store.setStore('bmi', bmi);
   }
 
   html`

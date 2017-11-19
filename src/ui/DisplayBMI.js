@@ -6,7 +6,7 @@ export default function DisplayBMI(store) {
 
   const displayBMI = html`
         <div class="score" data-anime="score">
-            <h2 class="score__msg">Great Shape!</h2>
+            <h2 class="score__msg">Bonne forme !</h2>
             <h2 class="score__bmi">IMC : <strong>${bmi}</strong></h2>
         </div>
     `;
