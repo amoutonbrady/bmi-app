@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rollup -c"
+    "start": "rollup -c",
+    "dev": "rollup --watch -c",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
@@ -16,6 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "cssnano": "^3.10.0",
+    "gh-pages": "^1.1.0",
     "postcss": "^6.0.14",
     "postcss-import": "^11.0.0",
     "precss": "^2.0.0",
@@ -28,6 +31,7 @@
     "uglify-es": "^3.1.9"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "hyperhtml": "^2.0.6",
     "majinbuu": "^1.1.2"
   }

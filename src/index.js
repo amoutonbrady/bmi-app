@@ -1,10 +1,11 @@
-import { bind, wire } from 'hyperhtml'
-import './styles/index.css'
+import { bind, wire } from 'hyperhtml';
+import './styles/index.css';
 
-import Heartbeat from './ui/Heartbeat'
-import Debug from './ui/Debug'
+import Heartbeat from './ui/Heartbeat';
+import DisplayBMI from './ui/DisplayBMI';
+import Debug from './ui/Debug';
 
-const render = bind(document.body)
+const render = bind(document.body);
 
 const store = {
   gender: 'male',
@@ -13,39 +14,35 @@ const store = {
   weight: 60,
   bmi: null,
   setStore(key, value) {
-    this[key] = value
-    App(render, this)
-  }
-}
+    this[key] = value;
+    App(render, this);
+  },
+};
 
-const num = number => Number.parseFloat(number)
+const num = number => Number.parseFloat(number);
 
 function App(html, store) {
+  const render = store.bmi ? DisplayBMI(store) : Heartbeat(store);
+
   function handleEvent({ target }) {
-    store.setStore(target.name, target.value)
+    store.setStore(target.name, target.value);
   }
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    const { height, weight } = store
+    const { height, weight } = store;
 
-    const bmi = num(weight) / Math.pow(num(height), 2)
-
-    store.setStore('bmi', bmi)
+    const bmi = num(weight) / Math.pow(num(height), 2);
   }
 
   html`
-    ${store.bmi && Debug(store)}
-
     <header class="header">
       <h3 class="header__title">Calculateur d'IMC</h3>
     </header>
 
     <main class="main">
-      <div class="heartbeat">
-        ${Heartbeat()}
-      </div>
+      ${render}
 
       <form class="form" onsubmit=${handleSubmit}>
         <section class="gender">
@@ -80,12 +77,12 @@ function App(html, store) {
         <button type="submit" class="form__submit">Calculer</button>
       </form>
     </main>
-  `
+  `;
 }
 
 function handleClick(e) {
-  store.name = 'Paux'
-  App(render, store)
+  store.name = 'Paux';
+  App(render, store);
 }
 
-App(render, store)
+App(render, store);
