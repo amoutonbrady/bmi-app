@@ -11,6 +11,10 @@ body {
   height: 100vh;
   font-size: 18px;
   background-image: linear-gradient(-135deg, #86FFB7, #6EF2A5, #5DE998);
+  font-family:
+/* 1 */ -apple-system, BlinkMacSystemFont,
+/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+/* 3 */ "Helvetica Neue", sans-serif;
 }
 
 /* HEADER */
